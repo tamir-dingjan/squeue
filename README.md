@@ -1,4 +1,5 @@
-# A simple software queueing tool for Schrodinger Suite components
+# Squeue
+A simple software queueing tool for Schrodinger Suite components.
 
 ## The Problem
 The [Schrodinger, Inc. software suite]("https://newsite.schrodinger.com/") uses a job submission system to enqueue and then run jobs. However, it does not include a mechanism to control the maximum number of running jobs on the localhost - this is a feature that can only be specified for remote hosts. Running jobs will also check for available license/s up to a fixed timeout of 30 seconds, after which they will crash. There is also no feature to prevent a job launching in the absence of sufficient available licenses. This causes problems when working with a limited number of licenses on the localhost: the job controller will simply launch all submitted jobs, and once all the available licenses have been checked out, subsequently submitted jobs will simply fail.
